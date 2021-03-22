@@ -1,38 +1,67 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.cardFrame{
+  margin: 40px 24px;
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+}
+.LadyImage{
+  position: relative;
+  bottom: 100px;
+}
+.Card{
+  margin-top: -190px;
+  background-color:white;
+  border-radius:25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  padding:90px 0px 50px 0px;
+  background-image:url(./images/womenOnlineMobileShadow.svg);
+  background-repeat:no-repeat;
+  background-position:55% 0%;
+}
+.content{
+  padding: 30px;
 }
 
-.App-link {
-  color: #61dafb;
+.content>h1{
+  font-size:2rem;
+  text-align: center;
+  /* change text-align to start for desktop */
+  letter-spacing: 0.08rem;
+  color:hsl(238, 29%, 16%);
+  font-weight:700px;
+  margin-bottom: 24px;
 }
+ @media only screen and (min-width:375px)
+{
+  .cardFrame{
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin:auto auto;
+  }
+  .Card{
+    width: 920px;
+    height:509px;
+    padding:40px 0px 50px 0px;
+    margin-top: 0px;
+    align-items: flex-end;
+    background-image:url(./images/LadyImageDesktop.svg),url(./images/LadyImageDesktopShadow.svg);
+    background-repeat:no-repeat;
+    background-position:-20% 45%,1200% 65%;
+    justify-content:start;
+  }
+  .content>h1{
+    text-align:start;
+  }
+  .box{
+    position: absolute;
+    left:-92px;
+    top:45px;
+    z-index: 5;
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
   }
-  to {
-    transform: rotate(360deg);
-  }
-}
+} 
